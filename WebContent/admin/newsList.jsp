@@ -33,5 +33,12 @@
 	</table>
 	
 	</form>
+	<center class="page">
+			 <a href="/news/1/0.htm?view=/admin/newsList.jsp">&laquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			 <a href="/news/${pb.prePage }/0.htm?view=/admin/newsList.jsp">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			 <span>${pb.pageIndex }/${pb.mxIndex }</span>&nbsp;&nbsp;&nbsp;&nbsp;
+			 <a href="/news/${pb.nextPage }/0.htm?view=/admin/newsList.jsp">&rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			 <a href="/news/${pb.mxIndex }/0.htm?view=/admin/newsList.jsp">&raquo;</a>
+	</center>
 </body>
 </html>

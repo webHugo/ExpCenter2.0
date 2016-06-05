@@ -25,6 +25,7 @@ tr
 {
 	width:80%;
 	
+	
 }
 tr:hover
 {
@@ -138,4 +139,25 @@ button:hover
 	font-family:微软雅黑;
 	padding-top:10px;
 	font-size:12px;
+}
+
+/*翻页*/
+
+.page
+{
+    color: #000;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.page a
+{
+   color:#000;
+   text-decoration:none;
+}
+
+.page a:hover
+{
+   color:#666666;
+   text-decoration:none;
 }

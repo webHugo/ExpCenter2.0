@@ -8,13 +8,13 @@
 </head>
 <body>
 	<div class="left le-left1">
-            
+	
             <ul>
                 <li class="navTitle">
                 <a href="/030100.htm">实验教学</a></li>
                 <li><a class="aa" href="/030100.htm">教学理念</a></li>
                 <li><a class="aa" href="/030200.htm">实验队伍</a></li>
-                <li class="dropmenu"><a class="aa" >设备与环境</a>
+                <li class="dropmenu"><a class="aa" >设备与环境<span class="caret"></a>
                     <ul>
                       <li>
                         <a href="/030301.htm">实验环境</a>
@@ -30,7 +30,7 @@
                       </li>
                     </ul>
                 </li>
-                <li class="dropmenu"><a class="aa" >实验课程</a>
+                <li class="dropmenu"><a class="aa" >实验课程<span class="caret"></a>
                 	<ul>
                       <li>
                         <a href="/030401.htm">基础实验课程</a>
@@ -40,8 +40,8 @@
                       </li>
                     </ul>
                 </li>
-                <li ><a class="aa" href="/030500.htm">开发实验</a></li>
-                <li class="dropmenu"><a class="aa" >创新班教学</a>
+                <li ><a class="aa" href="/030500.htm">开放实验</a></li>
+                <li class="dropmenu"><a class="aa" >创新班教学<span class="caret"></a>
                 	<ul>
                       <li>
                         <a href="/030601.htm">软件实验班</a>

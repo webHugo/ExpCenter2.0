@@ -11,12 +11,13 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/two.js"></script>
 	<link rel="stylesheet" href="/css/index.css">
 	<link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/style1.css">
 </head>
 <body class="myBody">
-	
+	 
 	<jsp:include page="/header.jsp" flush="true"></jsp:include>
     <div class="content"> 
     <c:if test="${!(empty nav.file) }">
@@ -27,7 +28,8 @@
           <span>当前位置-</span>${nav.location }<a href="">${nI.name}</a>
         </div>
         <hr></hr>
-        ${href }
+       
+      
         <c:choose>
         <c:when test="${!(empty nI.reqUrl) }">
         	<div class="rightPage">
@@ -35,12 +37,32 @@
         	 </div>
         </c:when>
         <c:when test="${!(empty nI.content) }">
-        <div class="elecontent">${nI.content }as</div>
+        <div class="elecontent">${nI.content }</div>
         </c:when>
         <c:otherwise>正在建设中...</c:otherwise>
         </c:choose>
       </div>
     </div>
 	<jsp:include page="/footer.jsp" flush="true"></jsp:include>
+	 <script>
+	 $(function(){ 
+		 
+			
+		 var href='${href }'; 
+         
+         $('.left li').each(function()
+        		 {
+        	       if($(this).children().attr('href')==href && $(this).attr('class')!='navTitle')
+        	    	   {
+        	    	   $(this).children().css('color','#000');
+        	    	  var $par=$(this).parent().parent();
+        	    	   if($par.attr('class')=='dropmenu')
+        	    		  $par.css('height','auto');
+        	    	   }
+        		 })
+        
+        })
+
+       </script>
 </body>
 </html>

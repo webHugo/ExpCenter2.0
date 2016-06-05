@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/two.js"></script>
 	<link rel="stylesheet" href="/css/index.css">
 	<link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/style1.css">
@@ -48,5 +49,6 @@
 		</div>
 	</div>
 	<jsp:include page="/footer.jsp" flush="true"></jsp:include>
+	
 </body>
 </html>

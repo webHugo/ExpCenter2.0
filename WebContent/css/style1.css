@@ -154,6 +154,14 @@
 
 }
 
+.navTitle a:hover
+{   
+    margin-left: 30px;
+    color: #fff;
+    text-decoration: none;
+
+}
+
 .content ul{
     margin: 0!important;
     padding: 0!important;
@@ -168,13 +176,7 @@
     overflow: hidden;
 }
 
-.dropmenu:hover
-{
-    
-    height: auto;
-    
 
-}
 
 
 .dropmenu>ul>li

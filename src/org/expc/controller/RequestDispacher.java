@@ -45,6 +45,7 @@ public class RequestDispacher {
 	}
 	@RequestMapping("/admin")
 	public String admin(){
+		System.out.println("dfsa");
 		return "/admin/admin.jsp";
 	}
 	@RequestMapping("{key}.adm")
