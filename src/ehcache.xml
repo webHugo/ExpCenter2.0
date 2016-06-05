@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+<!--缓存到硬盘的路径-->
+<diskStore path="java.io.tmpdir"/>
+<defaultCache maxElementsInMemory="200" eternal="false"	timeToIdleSeconds="600"	timeToLiveSeconds="6000"
+overflowToDisk="true"/>
+
+<cache name="org.hibernate.cache.spi.UpdateTimestampsCache"  
+       maxElementsInMemory="5000"   
+       eternal="true"   
+       overflowToDisk="true" />  
+<cache name="org.hibernate.cache.internal.StandardQueryCache"  
+       maxElementsInMemory="10000"   
+       eternal="false"   
+       timeToLiveSeconds="1200"  
+       overflowToDisk="true" /> 
+<!--
+java文件注解查找cache方法名的策略：如果不指定java文件注解中的    region="ehcache.xml中的name的属性值", 则使用name名为全限定包名, 如果不存在与类名匹配的cache名称, 则用 defaultCache，如果类中包含set集合, 则需要另行指定其cache指定缓存的对象，缓存哪一个实体类，下面出现的的属性覆盖上面出现的，没出现的继承上面的。
+-->
+
+</ehcache>

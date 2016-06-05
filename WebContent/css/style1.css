@@ -1,0 +1,288 @@
+.content{
+    width: 1050px;
+    /*background-color: #00E0F2;*/
+    margin: 2em auto 0;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.con-right{
+    width: 20%;
+    background-color: #5599ff;
+    position: relative;
+}
+.con-left{
+    width: 78%;
+}
+
+/* 列表 */
+.le-right{
+    width: 70%;
+    /*background-color: #00E0F2;*/
+    border-radius: 10px;
+    border: solid 1px #5599ff;
+    height: 700px;
+    box-shadow: 0px 3px 15px 3px #aaaaaa;
+    padding-top: 25px;
+}
+
+.list
+{
+    border-bottom: dashed 1px #aaaaaa;
+    padding-bottom:3px;
+    
+}
+
+.le-right1 p
+{   
+    font-size: 13px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-indent:2em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: left;
+   
+}
+
+.le-right1 p a
+{
+    text-decoration: none;
+    color: #888888;
+}
+.le-right1 p a:hover
+{
+    
+    color: #666666;
+}
+.le-right1 p span
+{
+    float: right;
+}
+.le-left{
+    width: 28%;
+    background-color: #5599ff;
+    font-family: 幼圆;
+    font-size: 10px;
+    border-radius: 5px;
+    
+}
+
+/* 内容 */
+.le-right1{
+    width: 76%;
+    height:auto;
+    border-radius: 10px;
+    border: solid 1px #5599ff;
+    
+    box-shadow: 0px 3px 15px 3px #aaaaaa;
+    
+    padding-bottom: 30px;
+    
+}
+.le-left1{
+    width: 22%;
+    background-color: #5599ff;
+    font-family: 幼圆;
+    font-size: 10px;
+    border-radius: 5px;
+    
+}
+
+
+
+.le-right1 img
+{
+    margin:0 auto;
+    width: 80%;
+    margin-top: 25px;
+}
+
+.le-right1 h1
+{
+    font-size: 20px;
+   font-family: 微软雅黑;
+}
+
+.le-right1 h2
+{
+   font-family: 微软雅黑;
+   font-size: 16px;
+}
+
+.le-right1 h3
+{
+   font-family: 黑体;
+   font-size: 16px;
+   text-align: left;
+   text-indent:4em;
+}
+
+.le-right1 div
+{
+    margin-top: 25px;
+}
+
+.return
+{
+    color: #666666;
+    text-decoration: none;
+}
+
+.return:hover
+{
+    color: #aaaaaa;
+    text-decoration: none;
+}
+/* 左导航 */
+.navTitle
+{
+    font-family: 微软雅黑;
+    font-size: 18px;
+    text-align: left;
+   
+}
+.navTitle a
+{   
+    margin-left: 30px;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.content ul{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.left >ul>li{
+    list-style: none; 
+    border-bottom:dashed 1px #aaaaaa;
+    height: 40px;
+    padding-top: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.dropmenu:hover
+{
+    
+    height: auto;
+    
+
+}
+
+
+.dropmenu>ul>li
+{
+    height: 30px;
+    padding-top: 10px;
+    
+}
+
+.dropmenu>ul>li:last-child
+{
+   
+    margin-bottom:15px;
+}
+.dropmenu>ul>li a
+{
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.dropmenu>ul>li a:hover
+{
+    color: #000;
+    text-decoration: none;
+}
+
+
+.aa{
+
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 1.5em; 
+    color: #fff;
+    text-decoration: none;
+}
+.aa:hover
+{
+    color: #444444;
+    text-decoration: none;
+}
+
+.page
+{
+    color: #888888;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.page a
+{
+   color:#888888;
+   text-decoration:none;
+}
+
+.page a:hover
+{
+   color:#666666;
+   text-decoration:none;
+}
+
+.fix-login{
+    width: 100%;
+    height: 260px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 35px 3px #aaaaaa;
+    position: absolute;
+    right: 0;
+    
+}
+
+.fix-login form div input[type=submit]{
+    border: none;
+}
+.fix-img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 35px 3px #aaaaaa;
+    position: absolute;
+    right: 0;
+    top: 300px;
+}
+.form-group{
+    margin: 0 -50px;
+}
+
+hr
+{
+    margin-top: 10px;
+
+    border-top: dashed 1px #aaaaaa;
+}
+
+.position
+{
+    text-align: left;
+    padding-left: 30px;
+}
+
+.position span
+{
+    font-family: 微软雅黑;
+    font-size: 14px;
+}
+
+.position a
+{
+    font-family: 微软雅黑;
+    font-size: 14px;
+    text-decoration: none;
+}

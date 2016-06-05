@@ -1,0 +1,190 @@
+.myBody
+{
+	width: 1100px;
+	text-align: center;
+	margin: 0 auto;
+    -webkit-box-shadow: 3px 3px 10px #dddddd;
+    box-shadow: 0px 3px 15px 2px #dddddd;
+}
+
+.myContainer
+{
+
+}
+
+/* 导航栏 */
+.myNav
+{
+	width: 1050px;
+	margin: 0 auto;
+	
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius:5px;
+}
+
+.nav
+{
+	
+}
+
+.myLi
+{
+   background-color: #5599ff;
+    border-right: 1.5px solid #fff;
+    font-family: 微软雅黑;
+}
+
+.myNav ul>li:last-child
+{
+	border-right: none;
+}
+
+.myNav a
+{
+	
+	border-radius:0px;
+	color: #fff;
+	
+}
+
+.myNav a:hover
+{
+	
+	border-radius:0px;
+	color: #000;
+}
+
+.myNav a:active
+{
+	
+	color: #000;
+}
+
+.open a
+{
+	
+	color:#000;
+}
+
+.dropdown-menu
+{
+   
+}
+
+/*轮播图*/
+.demo { 
+
+float: left;
+
+width: 800%;
+} 
+
+
+#demo
+{
+	clear: both;
+    overflow:hidden; 
+}
+
+#demo1 { 
+
+float: left; 
+
+/* width: 985px; */
+
+} 
+#demo2 { 
+float: left; 
+} 
+
+/*登录*/
+.username
+{
+	margin:0 auto;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	width:70%;
+}
+
+.password
+{
+	margin:0 auto;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	width: 70%;
+}
+
+label
+{
+	width: 30%；
+	margin-top:40px;
+	margin-left: 10px;
+	font-family: 幼圆;
+	font-size: 11px;
+
+}
+
+
+button
+{
+	margin-top: 10px;
+	background-color: #5599ff;
+	width: 60%;
+	height: 30px;
+	border-radius: 5px;
+	box-shadow:3px 3px 10px 2px #dddddd;
+	
+	border: none;
+	font-family: 微软雅黑;
+	
+
+}
+
+button:hover
+{
+	filter:alpha(opacity=80);
+	opacity:0.8;
+}
+
+.row .col-md-2 button a
+{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+
+.fix-login button a
+{
+	text-decoration: none;
+}
+
+
+
+
+.fastR
+{
+	height: 45px;
+	width: 100%;
+	padding-top: 12px;
+	border-radius: 3px;
+	background-color: #5599ff;
+	border:solid 1px #dddddd;
+
+	 /* box-shadow: inset 0px 0px 10px 3px #dddddd;  */
+	/*box-shadow:  0 3px 20px 3px #dddddd;*/
+}
+
+.fastR:hover
+{
+	box-shadow: inset 0px 0px 5px 1px #dddddd;
+}
+.fastR a
+{
+	color: #fff;
+	font-family: 微软雅黑;
+	text-decoration: none;
+
+}
