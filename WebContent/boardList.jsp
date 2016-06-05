@@ -34,11 +34,13 @@
 			</p>
 			</c:forEach>
 			</div>
-			<a href="/news/1/0.htm">第一页</a>
-			<a href="/news/${pb.prePage }/0.htm">前一页</a>
-			<span>${pb.pageIndex }/${pb.mxIndex }</span>
-			<a href="/news/${pb.nextPage }/0.htm">后一页</a>
-			<a href="/news/${pb.mxIndex }/0.htm">最后一页</a>
+			<div class="page">
+			  <a href="/board/1/0.htm">&laquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			  <a href="/board/${pb.prePage }/0.htm">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			  <span>${pb.pageIndex }/${pb.mxIndex }</span>&nbsp;&nbsp;&nbsp;&nbsp;
+			  <a href="/board/${pb.nextPage }/0.htm">&rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			  <a href="/board/${pb.mxIndex }/0.htm">&raquo;</a>
+			</div>
 		</div>
 	</div>
 </body>

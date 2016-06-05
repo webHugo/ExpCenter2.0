@@ -31,12 +31,12 @@
 	</table>
 	
 	</form>
-	<div class="page">
+	<center class="page">
 			 <a href="/nI/1/0.htm?view=/admin/nIList.jsp">&laquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			 <a href="/nI/${pb.prePage }/0.htm?view=/admin/nIList.jsp">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			 <span>${pb.pageIndex }/${pb.mxIndex }</span>&nbsp;&nbsp;&nbsp;&nbsp;
 			 <a href="/nI/${pb.nextPage }/0.htm?view=/admin/nIList.jsp">&rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			 <a href="/nI/${pb.mxIndex }/0.htm?view=/admin/nIList.jsp">&raquo;</a>
-	</div>
+	</center>
 </body>
 </html>

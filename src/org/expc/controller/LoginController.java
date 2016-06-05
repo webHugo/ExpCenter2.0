@@ -24,6 +24,7 @@ public class LoginController {
 	public String login(String username, String password, String role,
 			HttpSession session,Model model)
 	{
+		
 		User user = null;
 		String msg = null;
 		if(null==username||null==password||null==role)
