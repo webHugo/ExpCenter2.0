@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><%=Constant.projectTitle %></title>
 <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
-
 <script src="/ckeditor/ckeditor.js"></script>
 <script src="/ckfinder/ckfinder.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/nIList.css">
@@ -41,6 +40,19 @@
 		
 	</form>
 	<script type="text/javascript">
+	
+	$(function()
+			{
+		
+		$('.asyn-form').submit(function()
+				{
+			alert('${msg}');
+			return false;
+			
+				})
+				
+				
+			})
 	var editor=CKEDITOR.replace( 'content', {
  	    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
  	    filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?Type=Images',
