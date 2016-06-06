@@ -6,6 +6,7 @@
  <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="/css/admin.css">
+    
  </head>
  <body>
    <header>
@@ -30,7 +31,7 @@
      	</ul>
      </div>
      <div class="right" >
-     	<iframe frameborder="0" scrolling="auto" name="bottom" src="/teacher.adm"></iframe>
+     	<iframe frameborder="0" scrolling="no" name="bottom" src="/teacher.adm"></iframe>
      </div>
      
    	

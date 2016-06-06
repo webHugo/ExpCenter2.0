@@ -15,7 +15,7 @@
     <br><br>
 	<form action="/teacher/delete" method="post" class="asyn-form" id="del">
 	<table>
-		<tr><th>用户名</th><th>名字</th><th>邮箱</th><th>信息</th></tr>
+		<tr><th>用户名</th><th>名字</th><th>邮箱</th><th>信息</th><th></th><th></th></tr>
 		<c:forEach  var="ele" items="${pb.data }">
 		<%-- <c:if test="${empty ele.reqUrl }"> --%>
 			<tr>
@@ -34,5 +34,12 @@
 	</table>
 	
 	</form>
+	<center class="page">
+			 <a href="/teacher/1/0.htm?view=/admin/teacherList.jsp">&laquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			 <a href="/teacher/${pb.prePage }/0.htm?view=/admin/teacherList.jsp">&lsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			 <span>${pb.pageIndex }/${pb.mxIndex }</span>&nbsp;&nbsp;&nbsp;&nbsp;
+			 <a href="/teacher/${pb.nextPage }/0.htm?view=/admin/teacherList.jsp">&rsaquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			 <a href="/teacher/${pb.mxIndex }/0.htm?view=/admin/teacherList.jsp">&raquo;</a>
+	</center>
 </body>
 </html>

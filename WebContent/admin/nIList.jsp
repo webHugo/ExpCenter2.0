@@ -15,7 +15,7 @@
     <br><br>
 	<form action="/nI/delete" method="post" class="asyn-form" id="del">
 	<table>
-		<tr><th>标识</th><th>名称</th><th>备注</th><th></th></tr>
+		<tr><th>标识</th><th>名称</th><th>备注</th><th></th><th></th><th></th></tr>
 		<c:forEach  var="ele" items="${pb.data }">
 		<c:if test="${empty ele.reqUrl }">
 			<tr>
