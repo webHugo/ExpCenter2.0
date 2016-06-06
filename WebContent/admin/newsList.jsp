@@ -15,11 +15,11 @@
     <br><br>
 	<form action="/news/delete" method="post" class="asyn-form" id="del">
 	<table>
-		<tr><th>内容</th><th>标题</th><th>发布人</th><th>发布时间</th></tr>
+		<tr><th>标题</th><th>发布人</th><th>发布时间</th><th></th><th></th></tr>
 		<c:forEach  var="ele" items="${pb.data }">
 
 			<tr>
-			<td>${ele.content}</td>
+			
 			<td>${ele.title}</td>
 			<td>${ele.publisher }</td>
 			<td>${ele.time }</td>
