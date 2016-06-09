@@ -13,6 +13,7 @@ import org.expc.dao.BaseDao;
 import org.expc.entity.NavItem;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,22 +29,29 @@ public class NavItemController extends BaseController<NavItem>{
 		super.setBaseDao(baseDao);
 	}
 	@RequestMapping("/addWithFile")
-	@ResponseBody public String add(NavItem entity,MultipartFile htmlFile) throws IOException {
+	public String add(NavItem entity,MultipartFile htmlFile,String view, Model model) throws IOException {
 		// TODO Auto-generated method stub
 		if(htmlFile!=null&&htmlFile.getBytes().length>0)
 		{
 			entity.setContent(new String(htmlFile.getBytes()));
 		}
-		return add(entity);
+		model.addAttribute("msg", add(entity));
+		model.addAttribute("ele", entity);
+		if(view!=null) return view;
+		return "/admin/nIForm.jsp";
 	}
 	@RequestMapping("/modifyWithFile")
-	@ResponseBody public String modify(NavItem entity,MultipartFile htmlFile) throws IOException {
+	 public String modify(NavItem entity,MultipartFile htmlFile, String view, Model model) throws IOException {
 		// TODO Auto-generated method stub
 		if(htmlFile!=null&&htmlFile.getBytes().length>0)
 		{
 			entity.setContent(new String(htmlFile.getBytes()));
 		}
-		return modify(entity);
+		model.addAttribute("msg", modify(entity));
+		model.addAttribute("ele", entity);
+		model.addAttribute("action", "1");
+		if(view!=null) return view;
+		return "/admin/nIForm.jsp";
 	}
 	@RequestMapping("/download/{id}")
 	public void download(@PathVariable String id, HttpServletResponse res)

@@ -30,6 +30,7 @@
 		<br><br>
 			<label >条目内容</label><br><br>
 			<textarea name="content" id="content" >${ele.content }</textarea>
+			<input name="text" type="hidden">
 		<br>
 		
 		<a class="a-upload">
@@ -41,18 +42,6 @@
 	</form>
 	<script type="text/javascript">
 	
-	$(function()
-			{
-		
-		$('.asyn-form').submit(function()
-				{
-			alert('${msg}');
-			return false;
-			
-				})
-				
-				
-			})
 	var editor=CKEDITOR.replace( 'content', {
  	    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
  	    filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?Type=Images',
@@ -73,7 +62,13 @@
 	       
 	        return false 
 	    }
-	})
+	});
+	$('.asyn-form').submit(function()
+	{
+		$('input[name="text"]').val(editor.document.getBody().getText());
+	});
+	var msg = '${msg}';
+    if(msg!='') alert(msg);
 	</script>
 </body>
 </html>
