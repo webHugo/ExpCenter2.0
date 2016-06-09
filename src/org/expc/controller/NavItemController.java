@@ -62,4 +62,8 @@ public class NavItemController extends BaseController<NavItem>{
 			e.printStackTrace();
 		}
 	}
+	@RequestMapping("/{id}.jso")
+	@ResponseBody public NavItem finOne(@PathVariable String id){
+		return baseDao.get(id);
+	}
 }
