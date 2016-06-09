@@ -25,7 +25,7 @@ public class NavItem extends BaseDomain {
 	 */
 	private String name;
 	/**
-	 * 内容
+	 * html格式内容
 	 */
 	@Lob
 	@Column(name="_content")
@@ -65,7 +65,10 @@ public class NavItem extends BaseDomain {
 	 * 文档备注
 	 */
 	private String remark;
-	
+	/**
+	 * text格式内容
+	 */
+	private String text;
 	public String getName() {
 		return name;
 	}
@@ -130,16 +133,6 @@ public class NavItem extends BaseDomain {
 	public void setId(String id) {
 		this.id = id;
 	}
-	/*@Override
-	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		if (obj instanceof NavItem) {
-			NavItem nI = (NavItem) obj;
-			if(nI.key().equals(key()))
-				return true;
-		}
-		return false;
-	}*/
 	
 	public String getReqUrl() {
 		return reqUrl;
@@ -147,4 +140,11 @@ public class NavItem extends BaseDomain {
 	public void setReqUrl(String reqUrl) {
 		this.reqUrl = reqUrl;
 	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
+	}
+	
 }
