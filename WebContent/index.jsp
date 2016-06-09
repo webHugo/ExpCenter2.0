@@ -29,16 +29,16 @@
                        <div class="col-md-2">
                        <div>
                                <div class="title"><a href="">登录</a></div>
-                              <form action="/login">
-                                <input type="text" class="form-control username" placeholder="Username" name="username">
-                                <input type="password" class="form-control password" placeholder="Password" name="password">     
+                              <form class="asyncForm" >
+                                <input type="text" class="form-control username" placeholder="Username" name="username" required>
+                                <input type="password" class="form-control password" placeholder="Password" name="password" required>     
                                
-                                <label><input class="select" type="radio" name="role" value="teacher"/>&nbsp;教师</label>
-                                <label><input type="radio" name="role" value="student"/>&nbsp;学生</label>
-                                <label><input type="radio" name="role" value="admin"/>&nbsp;管理员</label>
+                                <label><input class="select" type="radio" name="role" value="teacher" required>&nbsp;教师</label>
+                                <label><input type="radio" name="role" value="student" required>&nbsp;学生</label>
+                                <label><input type="radio" name="role" value="admin" required>&nbsp;管理员</label>
  	                              <br>    
                                            
-                                <button><a>登录</a></button>
+                                <button type="button" onclick="asy($('.asyncForm'))">登录</button>
                              </form> 
                            </div>
                            
@@ -53,25 +53,22 @@
                        
                        <div class="col-md-5">
                            <div>
-                               <div class="title"><a href="">中心简介</a></div>
-                               <p><a href="">&nbsp;&nbsp;大连理工大学实验中心成立于2016年1月，由原来的软件学院信</a></p>
-                               <p><a href="">息中心和软件机房合并而成。2013年获辽宁升级实验教学中心示</a></p>
-                               <p><a href="">息中心和软件机房合并而成。2013年获辽宁升级实验教学中心示</a></p>
-                               <p><a href="">息中心和软件机房合并而成。2013年获辽宁升级实验教学中心示</a></p>
-                               <p><a href="">息中心和软件机房合并而成。2013年获辽宁升级实验教学中心示</a></p>
-                               <p><a href="">息中心和软件机房合并而成。2013年获辽宁升级实……<span>[详细]</span></a></p>
+                               <div class="title"><a>中心简介</a><a href="/010100.htm" class='more'>more&nbsp;&raquo;</a></div>
+                               <div class="intro" limit="175">&nbsp;&nbsp;
+                               </div>
+                               
                            </div>
                        </div>
 
                        <div class="col-md-5">
                            <div>
-                               <div class="title"><a href="">实验课程</a></div>
-                               <p><a href="">第十三届科技文化节启动通知……</a><span>[2016/03/05]</span></a></p>
-                               <p><a href="">第十三届科技文化节启动通知……</a><span>[2016/03/05]</span></a></p>
-                               <p><a href="">第十三届科技文化节启动通知……</a><span>[2016/03/05]</span></a></p>
-                               <p><a href="">第十三届科技文化节启动通知……</a><span>[2016/03/05]</span></a></p>
-                               <p><a href="">第十三届科技文化节启动通知……</a><span>[2016/03/05]</span></a></p>
-                               <p><a href="">第十三届科技文化节启动通知……</a><span>[2016/03/05]</span></a></p>
+                               <div class="title"><a >实验课程</a><a href="/030401.htm" class='more'>more&nbsp;&raquo;</a></div>
+                               <p><a href="/030401.htm">网络综合实验</a><a style="float:right;" href="/030401.htm">网络综合实验</a></p>
+                               <p><a href="/030401.htm">网络信息安全实验</a><a style="float:right;" href="/030401.htm">网络信息安全</a></p>
+                               <p><a href="/030401.htm">计算机组成原理实验</a><a style="float:right;" href="/030401.htm">计算机组成原理</a></p>
+                               <p><a href="/030402.htm">数字与模拟电路</a><a style="float:right;" href="/030401.htm">大学物理</a></p>
+                               <p><a href="/030402.htm">大学物理</a><a style="float:right;" href="/030401.htm">网络综合实验</a></p>
+                               <p><a href="/030402.htm">嵌入式综合实验</a><a style="float:right;" href="/030401.htm">网络综合实验</a></p>
                                
                            </div>
                        </div>
@@ -102,11 +99,11 @@
                             <div id="demo">
                             <div class="demo">
                              	<div id="demo1">
-                             		<a href=""><img src="/images/img1.png"></a>
-                             		<a href=""><img src="/images/img2.png"></a>
-                                <a href=""><img src="/images/img3.png"></a>
-                                <a href=""><img src="/images/img4.png"></a>
-                                <a href=""><img src="/images/img1.png"></a>
+                             		<a href="/news/2.htm"><img src="/images/img1.png"></a>
+                             		<a href="/news/3.htm"><img src="/images/img2.png"></a>
+                                <a href="/news/4.htm"><img src="/images/img3.png"></a>
+                                <a href="/news/5.htm"><img src="/images/img4.png"></a>
+                                <a href="/news/6.htm"><img src="/images/img1.png"></a>
 
                              	</div>
                              	
@@ -122,11 +119,11 @@
            <div class="con-fif">
                 <div class="row">
                     <div class="con-fif-picture"><div>
-                      <img src="/images/link1.png">
-                      <img src="/images/link1.png">
-                      <img src="/images/link1.png">
-                      <img src="/images/link1.png">
-                      <img src="/images/link1.png">
+                     <a href="http://sei.dlut.edu.cn/"> <img src="/images/lg2.png"></a>
+                     <a href="http://drise.dlut.edu.cn/"><img src="/images/link1.png"></a>
+                     <a href="http://www.lib.dlut.edu.cn/"><img src="/images/lg3.png"></a>
+                     <a href="http://www.dlut.edu.cn/"><img src="/images/lg4.png"></a>
+                     <a href="http://ssdut.dlut.edu.cn/index.htm"><img src="/images/lg5.png"></a>
                     </div></div>
                     
                 </div>
