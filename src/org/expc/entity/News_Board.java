@@ -43,10 +43,7 @@ public class News_Board extends BaseDomain {
 	 * 图片链接
 	 */
 	private String imgUri;
-	/**
-	 * 图片名称
-	 */
-	private String imgName;
+	
 	/**
 	 * 新闻摘要
 	 */
@@ -74,7 +71,7 @@ public class News_Board extends BaseDomain {
 	 */
 	private String refSource;
 	/**
-	 * 置顶基本
+	 * 置顶级别
 	 */
 	private int stickieLevel;
 	/**
@@ -168,14 +165,6 @@ public class News_Board extends BaseDomain {
 
 	public void setImgUri(String imgUri) {
 		this.imgUri = imgUri;
-	}
-
-	public String getImgName() {
-		return imgName;
-	}
-
-	public void setImgName(String imgName) {
-		this.imgName = imgName;
 	}
 
 	public String getSummary() {
