@@ -11,10 +11,10 @@
             
             <ul>
                 <li class="navTitle">
-                <a href="/070100.htm">管理制度</a></li>
-                <li><a class="aa" href="/070100.htm">中心制度</a></li>
-                <li><a class="aa" href="/070200.htm">学院制度</a></li>
-                <li><a class="aa" href="/070300.htm">中心值班表</a></li>
+                <a href="/070100.htm">服务指南</a></li>
+                <li><a class="aa" href="/070100.htm">学生指南</a></li>
+                <li><a class="aa" href="/070200.htm">教师指南</a></li>
+                <li><a class="aa" href="/070300.htm">联系我们</a></li>
 				
             </ul>
       </div>   
