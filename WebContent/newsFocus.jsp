@@ -15,7 +15,7 @@
 	PageBean pb = (PageBean)request.getAttribute("pb");
 	%>
 	<div>
-	 <div class="title"><a href="">新闻公告</a></div>
+	 <div class="title"><a >新闻公告</a><a href="/news/1/0.htm" class='more'>more&nbsp;&raquo;</a></div>
 	<c:forEach var="ele" items="${pb.data }" begin="0" end="5"> 
 	<p>
 	<a href="/news/${ele.id }.htm">${ele.title }</a>

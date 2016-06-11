@@ -11,8 +11,8 @@
 <div class="myFooter" id="footer">
  <div class="text">
                 <!--<div class="container">-->
-                    <p class="text-center">版权所有@大连理工大学软件学院</p>
-                    <p class="text-center">高思实验室</p>
+                    <p class="text-center">版权所有@大连理工大学软件学院实验教学示范中心</p>
+                    <p class="text-center">技术支持：高思实验室</p>
                 <!--</div>-->
             </div>
             </div>

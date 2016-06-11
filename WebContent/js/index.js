@@ -25,11 +25,76 @@ function Marquee(){
 } 
 
 
+//中心简介
+function getIntro()
+{
+	var intro=$('.intro');
+	$.ajax(
+			{
+				  type:"GET",
+				  url:"../nI/010100.jso",
+				  dataType:"json",
+				  async: false,
+				  success:function(data)
+						  {
+					        var cen_intro=data.text;
+					        cen_intro=cen_intro.substring(4,210)+'……';
+					        intro.text(cen_intro);
+						  }
+			})
+}
+
+function asy(fm)
+{
+	if(!($('input[name="role"]').is(":checked")))
+		alert('请选择登录身份！');
+	else
+		{
+		$.ajax(
+				{
+			
+			type:"post",
+			url:"/login",
+			data:$(fm).serialize(),
+			async:true,
+			success:function(data){
+				var da=data;
+				var flag=da.substring(0,1);
+				var href=da.substring(1);
+				
+				if(flag=='1')
+					{
+					
+					alert(href);
+					}
+					
+				else 
+					{
+					
+					window.location.href=href;
+					}
+					return false;
+			                     }
+				});
+		}
+	
+	}
 $(function()
 {
 	
 	var MyMar=setInterval("Marquee()",speed); 
 	tab.mouseover(function() {clearInterval(MyMar);}); 
 	tab.mouseout(function() {MyMar=setInterval("Marquee()",speed);}); 
-
+    getIntro();
+    
+    
+    		
+  /*  
+   	$('.asyncForm').submit(function()
+        		{
+    		
+        	return asy($(this));
+        		});
+     */
+    
 })
