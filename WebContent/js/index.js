@@ -38,7 +38,7 @@ function getIntro()
 				  success:function(data)
 						  {
 					        var cen_intro=data.text;
-					        cen_intro=cen_intro.substring(4,216)+'……';
+					        cen_intro=cen_intro.substring(4,210)+'……';
 					        intro.text(cen_intro);
 						  }
 			})
@@ -46,8 +46,8 @@ function getIntro()
 
 function asy(fm)
 {
-	if($('input[type="submit"]').value==null)
-		alert("请选择登录身份！");
+	if(!($('input[name="role"]').is(":checked")))
+		alert('请选择登录身份！');
 	else
 		{
 		$.ajax(
