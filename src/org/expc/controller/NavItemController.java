@@ -35,10 +35,8 @@ public class NavItemController extends BaseController<NavItem>{
 		{
 			entity.setContent(new String(htmlFile.getBytes()));
 		}
-		model.addAttribute("msg", add(entity));
-		model.addAttribute("ele", entity);
-		if(view!=null) return view;
-		return "/admin/nIForm.jsp";
+		if(view!=null) view= "/admin/nIForm.jsp";
+		return add(entity, model,view);
 	}
 	@RequestMapping("/modifyWithFile")
 	 public String modify(NavItem entity,MultipartFile htmlFile, String view, Model model) throws IOException {
@@ -47,11 +45,8 @@ public class NavItemController extends BaseController<NavItem>{
 		{
 			entity.setContent(new String(htmlFile.getBytes()));
 		}
-		model.addAttribute("msg", modify(entity));
-		model.addAttribute("ele", entity);
-		model.addAttribute("action", "1");
-		if(view!=null) return view;
-		return "/admin/nIForm.jsp";
+		if(view!=null) view= "/admin/nIForm.jsp";
+		return modify(entity, model,view);
 	}
 	@RequestMapping("/download/{id}")
 	public void download(@PathVariable String id, HttpServletResponse res)
