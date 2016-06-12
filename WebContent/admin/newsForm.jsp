@@ -19,7 +19,7 @@
 	class="form-horizontal asyn-form" >
 		<c:if test="${!(empty action) }">
 			<input name="id" type="hidden" value="${ele.id }">
-			<input name="time" type="hidden" value="${ele.time }">
+			<%-- <input name="time" type="hidden" value="${ele.time }"> --%>
 			<input name="publisher" type="hidden" value="${ele.publisher }">
 		</c:if>
 		<label >标题</label>

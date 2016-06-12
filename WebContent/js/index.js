@@ -25,6 +25,33 @@ function Marquee(){
 } 
 
 
+//从数据库获取轮播的图片
+function insertImg()
+{
+   $.ajax(
+		   {
+			   type:"GET",
+			   url:"/news/rollImgs",
+			   dataType:"json",
+			   async:false,
+			   success:function(data)
+			   {
+				   var html='';
+				   $.each(data,function(commentIndex,comment){
+					   if(comment['imgUri']!=null)
+						   {
+						   html=html+'<a href="'+comment['newsUri']+'"><img src="'+comment['imgUri']+'"></a>';
+						   
+						   }
+					   
+				   });
+				   tab1.html(html);
+			   }
+		   })
+		   
+	
+}
+
 //中心简介
 function getIntro()
 {
@@ -82,19 +109,14 @@ function asy(fm)
 $(function()
 {
 	
-	var MyMar=setInterval("Marquee()",speed); 
-	tab.mouseover(function() {clearInterval(MyMar);}); 
-	tab.mouseout(function() {MyMar=setInterval("Marquee()",speed);}); 
+	insertImg();
+	
+	 var MyMar=setInterval("Marquee()",speed); 		
+		tab.mouseover(function() {clearInterval(MyMar);}); 
+		tab.mouseout(function() {MyMar=setInterval("Marquee()",speed);}); 
     getIntro();
+   
     
-    
-    		
-  /*  
-   	$('.asyncForm').submit(function()
-        		{
-    		
-        	return asy($(this));
-        		});
-     */
+
     
 })
