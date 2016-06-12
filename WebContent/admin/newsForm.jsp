@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,7 @@
 	class="form-horizontal asyn-form" >
 		<c:if test="${!(empty action) }">
 			<input name="id" type="hidden" value="${ele.id }">
-			<%-- <input name="time" type="hidden" value="${ele.time }"> --%>
+			<input name="time" type="hidden" value="<fmt:formatDate value="${ele.time }" pattern="yyyy-MM-dd HH:mm:ss"/>">
 			<input name="publisher" type="hidden" value="${ele.publisher }">
 		</c:if>
 		<label >标题</label>
