@@ -35,7 +35,8 @@ public class NewsController extends BaseController<News>{
 		entity.setUpdateTime(new Date());
 		entity.setUpdatePerson(pub);
 		if(view == null||view.equals("")) view= "/admin/newsForm.jsp";
-		return super.add(entity, model,view);
+		super.add(entity, model);
+		return view;
 	}
 	@RequestMapping("/modify")
 	public String modify(News entity, Model model,String view,HttpSession session) {
@@ -44,7 +45,8 @@ public class NewsController extends BaseController<News>{
 		User u = (User) session.getAttribute("user");
 		entity.setUpdatePerson(u.getName());
 		if(view == null) view= "/admin/newsForm.jsp";
-		return super.modify(entity, model,view);
+		super.modify(entity, model);
+		return view;
 		
 	}
 	@RequestMapping("/rollImgs")
