@@ -24,7 +24,6 @@ public  class BaseController<T>{
 	{
 		this.baseDao = baseDao;
 	}
-	@RequestMapping("/add")
     public String add(T entity,Model model,String view) throws IOException
 	{
 		String msg="添加成功";
@@ -62,7 +61,6 @@ public  class BaseController<T>{
 		model.addAttribute("action", "modify");
 		return "/admin/"+view+".jsp";
 	}
-	@RequestMapping("/modify")
 	 public String modify(T entity, Model model,String view)
 	{
 		String msg= null;

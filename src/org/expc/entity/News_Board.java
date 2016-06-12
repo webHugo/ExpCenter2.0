@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 @MappedSuperclass
 public class News_Board extends BaseDomain {
 	/**
@@ -85,6 +87,7 @@ public class News_Board extends BaseDomain {
 	/**
 	 * 发布时间
 	 */
+	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="_time")
 	private Date time;

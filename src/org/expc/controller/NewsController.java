@@ -6,12 +6,13 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.expc.dao.BaseDao;
 import org.expc.entity.News;
+import org.expc.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -24,20 +25,24 @@ public class NewsController extends BaseController<News>{
 		// TODO Auto-generated method stub
 		super.setBaseDao(baseDao);
 	}
-	@Override
-	public String add(News entity,Model model,String view) throws IOException {
+	@RequestMapping("/add")
+	public String add(News entity,Model model,String view,HttpSession session) throws IOException {
 		// TODO Auto-generated method stub
 		entity.setTime(new Date());
-		entity.setPublisher("a:lds");
+		User u = (User) session.getAttribute("user");
+		String pub =u.getName();
+		entity.setPublisher(pub);
 		entity.setUpdateTime(new Date());
-		entity.setUpdatePerson("a:lds");
+		entity.setUpdatePerson(pub);
 		if(view == null||view.equals("")) view= "/admin/newsForm.jsp";
 		return super.add(entity, model,view);
 	}
-	@Override
-	public String modify(News entity, Model model,String view) {
+	@RequestMapping("/modify")
+	public String modify(News entity, Model model,String view,HttpSession session) {
 		// TODO Auto-generated method stub
 		entity.setUpdateTime(new Date());
+		User u = (User) session.getAttribute("user");
+		entity.setUpdatePerson(u.getName());
 		if(view == null) view= "/admin/newsForm.jsp";
 		return super.modify(entity, model,view);
 		
@@ -45,7 +50,7 @@ public class NewsController extends BaseController<News>{
 	@RequestMapping("/rollImgs")
 	@ResponseBody public List rollImgs()
 	{
-		List<News> list = baseDao.getPage("from News order by time desc,rollLevel desc", 1, 10).getData();
+		List<News> list = baseDao.getPage("from News where imgUri is not null order by updateTime desc,rollLevel desc", 1, 6).getData();
 		List<TrimNews> ret = new ArrayList<TrimNews>();
 		for(News n: list)
 		{
