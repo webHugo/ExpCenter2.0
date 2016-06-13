@@ -24,15 +24,14 @@ public  class BaseController<T>{
 	{
 		this.baseDao = baseDao;
 	}
-	@RequestMapping("/add")
-    public String add(T entity,Model model,String view) throws IOException
+    public String add(T entity,Model model) throws IOException
 	{
 		String msg="添加成功";
 		if(!baseDao.save(entity))
 			msg="添加失败";
 		model.addAttribute("msg", msg);
 		model.addAttribute("ele", entity);
-		return view;
+		return msg;
 	}
 	
 	
@@ -62,8 +61,7 @@ public  class BaseController<T>{
 		model.addAttribute("action", "modify");
 		return "/admin/"+view+".jsp";
 	}
-	@RequestMapping("/modify")
-	 public String modify(T entity, Model model,String view)
+	 public String modify(T entity, Model model)
 	{
 		String msg= null;
 		if(baseDao.update(entity))
@@ -72,7 +70,7 @@ public  class BaseController<T>{
 		model.addAttribute("msg", msg);
 		model.addAttribute("ele", entity);
 		model.addAttribute("action", "modify");
-		return view;
+		return msg;
 	}
 	@RequestMapping(value="/{pageIndex}/{pageSize}.htm" )
 	public String getPageRView(@PathVariable Integer pageIndex,@PathVariable Integer pageSize,Model model,
