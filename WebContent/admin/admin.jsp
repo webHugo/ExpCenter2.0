@@ -11,7 +11,7 @@
  <body>
    <header>
    	  <img src="/images/adminTit.png">
-   	 <div class="loginState"><span>张宏，你好！&nbsp;|</span><a href="">&nbsp;注销</a></div>
+   	 <div class="loginState"><span >${user.username },你好！&nbsp;|</span><a href="/logout">&nbsp;注销</a></div>
    </header>
    <div class="content">
      <div class="left">

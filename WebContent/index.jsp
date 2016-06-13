@@ -99,11 +99,11 @@
                             <div id="demo">
                             <div class="demo">
                              	<div id="demo1">
-                             		 <a href="/news/7.htm"><img src="/images/img1.png"></a>
+                             		  <a href="/news/7.htm"><img src="/images/img1.png"></a>
                              		<a href="/news/8.htm"><img src="/images/img2.png"></a>
                                 <a href="/news/9.htm"><img src="/images/img3.png"></a>
                                 <a href="/news/5.htm"><img src="/images/img4.png"></a>
-                               <!-- <a href="/news/6.htm"><img src="/images/img1.png"></a> -->
+                             <!--  <a href="/news/6.htm"><img src="/images/img1.png"></a> -->
 
                              	</div>
                              	
